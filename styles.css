@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+.game-container {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+}
+
+.card {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card.flipped {
+    background-color: #FFF;
+    color: #000;
+    transform: rotateY(180deg);
+}
+
+.card.match {
+    background-color: #00C853;
+}
+
+#score-display {
+    margin: 20px 0;
+    font-size: 18px;
+}
